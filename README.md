@@ -1,2 +1,2 @@
-# Blur-image-loader
-Simple blur image loader
+# Blur image loader
+Simple blur image to normal image loader
