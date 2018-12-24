@@ -7,7 +7,7 @@ function blurLoadImage() {
         var image = new Image();
         image.src = elementLargeImage;
 
-        $(image).load(function() {
+        waitForImageToLoad(image).then(() => {
             if (elementTag == "div") {
                 $(el).attr('style', 'background-image: url("'+ elementLargeImage +'");');
             }
@@ -15,7 +15,11 @@ function blurLoadImage() {
                 $(el).attr("src", elementLargeImage);
             }
         });
-
-        if (image.complete) $(image).load();
     });
 };
+
+function waitForImageToLoad(imageElement){
+    return new Promise(resolve => {
+            imageElement.onload = resolve
+    })
+}
