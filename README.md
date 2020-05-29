@@ -5,13 +5,13 @@ Require `Jquery` 1.11 and more.
 
 ## Usage
 
-Import script in your project
+Import script in your project:
 
 ```php
   <script src="js/blur.js"></script>
 ```
 
-Call script
+Call script:
 
 ```js
   blurLoadImage();
